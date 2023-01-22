@@ -1,3 +1,7 @@
+provider "aws" {
+  region = var.ct_home_region
+}
+
 module "aft" {
   source = "github.com/aws-ia/terraform-aws-control_tower_account_factory"
   ct_management_account_id    = var.ct_management_account_id
